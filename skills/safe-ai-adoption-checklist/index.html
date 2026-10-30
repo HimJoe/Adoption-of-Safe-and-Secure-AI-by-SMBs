@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Safe AI Adoption Checklist skill · SME AI Safety Toolkit</title>
+<meta name="description" content="Download the Safe AI Adoption Checklist skill file, SOP, PDF and Word checklist. Works with Claude, ChatGPT, Gemini and other AI assistants. Prepared by SafeAlign AI.">
+<style>
+:root{--ink:#1F2937;--muted:#5B6472;--line:#E5E7EB;--bg:#FFFFFF;--soft:#F5F7F8;--green:#16A34A;--green-d:#0F7A36;--dark:#111827}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--ink:#E5E7EB;--muted:#9CA3AF;--line:#2B3340;--bg:#0E1116;--soft:#161B22;--green:#34D399;--green-d:#6EE7B7;--dark:#000}}
+:root[data-theme="dark"]{--ink:#E5E7EB;--muted:#9CA3AF;--line:#2B3340;--bg:#0E1116;--soft:#161B22;--green:#34D399;--green-d:#6EE7B7;--dark:#000}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+a{color:var(--green-d)}
+header{background:var(--dark);color:#fff}
+.wrap{max-width:900px;margin:0 auto;padding:0 16px}
+.top{display:flex;align-items:center;gap:12px;padding:14px 0;font-size:14px}
+.top a{color:#D1D5DB;text-decoration:none}
+.top img{height:36px;width:36px;border-radius:50%;background:#fff}
+.hd{padding:28px 0 24px}
+.hd h1{margin:0 0 8px;font-size:clamp(24px,4vw,34px);letter-spacing:-.4px}
+.hd p{margin:0;color:#D1D5DB;max-width:680px}
+main{padding:28px 0 40px}
+h2{font-size:20px;margin:0 0 8px}
+.lead{color:var(--muted);margin:0 0 20px}
+.dls{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-bottom:28px}
+.dl{display:block;border:1px solid var(--line);border-radius:12px;padding:16px;text-decoration:none;color:var(--ink);background:var(--bg)}
+.dl:hover{border-color:var(--green)}
+.dl b{display:block;color:var(--green-d);margin-bottom:4px}
+.dl span{color:var(--muted);font-size:14px}
+ol.steps{padding-left:20px;margin:0 0 28px}
+ol.steps li{margin-bottom:8px}
+.skill{border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.skill .bar{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:10px 14px;background:var(--soft);border-bottom:1px solid var(--line);font-size:14px;color:var(--muted);flex-wrap:wrap}
+button{font:inherit;font-size:14px;border:1px solid var(--line);background:var(--bg);color:var(--ink);padding:6px 12px;border-radius:8px;cursor:pointer}
+button:hover{border-color:var(--green)}
+pre{margin:0;padding:16px;overflow:auto;max-height:560px;font:13px/1.55 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;white-space:pre-wrap;word-break:break-word}
+footer{border-top:1px solid var(--line);padding:20px 0;color:var(--muted);font-size:14px}
+footer a{color:var(--muted)}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="top">
+      <img src="../../assets/safealign-logo.png" alt="SafeAlign AI logo">
+      <a href="../../">← SME AI Safety Toolkit</a>
+    </div>
+    <div class="hd">
+      <h1>Safe AI Adoption Checklist: AI skill file</h1>
+      <p>Load this skill into Claude, ChatGPT, Gemini or any AI assistant. It walks you through the 26-item checklist for one AI use case and produces a sign-off record.</p>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <h2>Download</h2>
+    <p class="lead">Start with the skill file. The SOP explains how to set it up and run a review.</p>
+    <div class="dls">
+      <a class="dl" href="SKILL.md" download><b>SKILL.md</b><span>The skill file. Load it into your AI assistant.</span></a>
+      <a class="dl" href="SOP.docx" download><b>SOP (Word)</b><span>Setup, running a review, go-live rules and records.</span></a>
+      <a class="dl" href="Safe_AI_Adoption_Checklist.pdf" download><b>Checklist (PDF)</b><span>Two-page printable version.</span></a>
+      <a class="dl" href="Safe_AI_Adoption_Checklist_Editable.docx" download><b>Checklist (Word)</b><span>Editable version for your own records.</span></a>
+    </div>
+
+    <h2>How to use the skill</h2>
+    <ol class="steps">
+      <li>Download <b>SKILL.md</b> and open a new conversation in your AI assistant.</li>
+      <li>Paste the full text below into the chat, or add it as custom instructions, a project or a Gem where your assistant supports that.</li>
+      <li>Ask: <i>"Run the Safe AI Adoption checklist for the use case below."</i> Then answer the four intake questions.</li>
+      <li>Keep the sign-off record, fix the red flags first, and set a 90-day review date.</li>
+    </ol>
+
+    <h2>Skill text</h2>
+    <div class="skill">
+      <div class="bar">
+        <span id="state">Loading…</span>
+        <button id="copy" type="button">Copy skill text</button>
+      </div>
+      <pre id="text"></pre>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">Prepared by <strong>SafeAlign AI</strong> · <a href="mailto:info@safealignai.io">info@safealignai.io</a> · questions and suggestions welcome. Practical guidance, not legal advice.</div>
+</footer>
+
+<script>
+(async () => {
+  const pre = document.getElementById("text"), state = document.getElementById("state");
+  let text = "";
+  try {
+    const r = await fetch("SKILL.md", {cache: "no-cache"});
+    if (!r.ok) throw new Error(r.status);
+    text = await r.text();
+    pre.textContent = text;
+    state.textContent = "SKILL.md · " + text.split(/\s+/).length + " words";
+  } catch (e) {
+    state.textContent = "Could not load the text here. Use the SKILL.md download above.";
+  }
+  document.getElementById("copy").addEventListener("click", async () => {
+    if (!text) return;
+    try { await navigator.clipboard.writeText(text); state.textContent = "Copied. Paste it into your AI assistant."; }
+    catch (e) { state.textContent = "Copy blocked by the browser. Select the text and copy it, or use the download."; }
+  });
+})();
+</script>
+</body>
+</html>
