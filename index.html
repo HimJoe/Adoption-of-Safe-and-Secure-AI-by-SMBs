@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SME AI Safety Toolkit</title>
+<meta name="description" content="Free, practical AI safety, security and governance tools for small and medium businesses. Prepared by SafeAlign AI.">
+<style>
+:root{--ink:#1F2937;--muted:#5B6472;--line:#E5E7EB;--bg:#FFFFFF;--soft:#F5F7F8;--green:#16A34A;--green-d:#0F7A36;--dark:#111827}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--ink:#E5E7EB;--muted:#9CA3AF;--line:#2B3340;--bg:#0E1116;--soft:#161B22;--green:#34D399;--green-d:#6EE7B7;--dark:#000}}
+:root[data-theme="dark"]{--ink:#E5E7EB;--muted:#9CA3AF;--line:#2B3340;--bg:#0E1116;--soft:#161B22;--green:#34D399;--green-d:#6EE7B7;--dark:#000}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+a{color:var(--green-d)}
+header{background:var(--dark);color:#fff}
+.wrap{max-width:1040px;margin:0 auto;padding:0 16px}
+nav{display:flex;align-items:center;gap:12px;padding:14px 0}
+nav img{height:44px;width:44px;border-radius:50%;background:#fff}
+nav .name{font-weight:700;letter-spacing:.2px}
+nav .sp{flex:1}
+nav a.l{color:#D1D5DB;text-decoration:none;font-size:14px;margin-left:14px}
+nav a.l:hover{color:#fff}
+.hero{padding:64px 0 48px;background:linear-gradient(180deg,var(--dark),#0B1F14 70%,var(--bg));color:#fff}
+.hero h1{font-size:clamp(30px,5vw,48px);line-height:1.15;margin:0 0 16px;letter-spacing:-.5px}
+.hero h1 span{color:#34D399}
+.hero p{font-size:19px;color:#D1D5DB;max-width:640px;margin:0 0 28px}
+.btn{display:inline-block;background:var(--green);color:#fff;padding:12px 20px;border-radius:8px;text-decoration:none;font-weight:600;margin-right:8px;margin-bottom:8px}
+.btn.ghost{background:transparent;border:1px solid #4B5563;color:#E5E7EB}
+section{padding:48px 0}
+h2{font-size:26px;margin:0 0 8px;letter-spacing:-.3px}
+.lead{color:var(--muted);margin:0 0 24px;max-width:720px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+.card{border:1px solid var(--line);border-radius:12px;padding:22px;background:var(--bg);display:flex;flex-direction:column}
+.card h3{margin:0 0 6px;font-size:18px}
+.card p{margin:0 0 14px;color:var(--muted);font-size:15px;flex:1}
+.tag{display:inline-block;font-size:12px;font-weight:600;padding:3px 9px;border-radius:99px;margin-bottom:12px;align-self:flex-start}
+.live{background:#DCFCE7;color:#166534}
+.soon{background:var(--soft);color:var(--muted);border:1px solid var(--line)}
+.card a.go{font-weight:600;text-decoration:none}
+.steps{counter-reset:s;list-style:none;padding:0;margin:0}
+.steps li{counter-increment:s;display:flex;gap:14px;padding:14px 0;border-bottom:1px solid var(--line)}
+.steps li:before{content:counter(s);flex:none;width:30px;height:30px;border-radius:50%;background:var(--green);color:#fff;font-weight:700;display:flex;align-items:center;justify-content:center}
+.soft{background:var(--soft)}
+footer{padding:28px 0;color:var(--muted);font-size:14px;border-top:1px solid var(--line)}
+footer a{color:var(--muted)}
+@media(max-width:600px){nav a.l{display:none}.hero{padding:44px 0 36px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <nav>
+      <img src="assets/safealign-logo.png" alt="SafeAlign AI logo">
+      <span class="name">SME AI Safety Toolkit</span>
+      <span class="sp"></span>
+      <a class="l" href="#tools">Tools</a>
+      <a class="l" href="#start">Start here</a>
+      <a class="l" href="mailto:info@safealignai.io">Contact</a>
+    </nav>
+  </div>
+  <div class="hero">
+    <div class="wrap">
+      <h1>Adopt AI safely.<br><span>Without a security team.</span></h1>
+      <p>Free checklists, skills and step-by-step procedures to help small and medium businesses use AI with confidence on data privacy, security, IP, staff and customers.</p>
+      <a class="btn" href="checklist/">Open the checklist</a>
+      <a class="btn ghost" href="skills/safe-ai-adoption-checklist/">Get the skill</a>
+    </div>
+  </div>
+</header>
+
+<section id="tools">
+  <div class="wrap">
+    <h2>Tools</h2>
+    <p class="lead">Each tool works on its own and can be used with Claude, ChatGPT, Gemini or any AI assistant. New tools are added as they are built.</p>
+    <div class="grid">
+      <div class="card">
+        <span class="tag live">Available now</span>
+        <h3>Safe AI Adoption Checklist</h3>
+        <p>26 items across seven sections, from data and privacy to staff training and exit planning. Run it for one AI use case in about an hour.</p>
+        <a class="go" href="checklist/">Open the interactive checklist →</a>
+      </div>
+      <div class="card">
+        <span class="tag live">Available now</span>
+        <h3>AI skill file (SKILL.md)</h3>
+        <p>Load it into any AI assistant and it will walk you through the checklist, ask the right questions and produce a sign-off record with red flags and a to-do list.</p>
+        <a class="go" href="skills/safe-ai-adoption-checklist/">Download the skill and SOP →</a>
+      </div>
+      <div class="card">
+        <span class="tag live">Available now</span>
+        <h3>Standard Operating Procedure</h3>
+        <p>How to set up the skill in your AI tool, run a review, apply go-live decision rules and keep records. Share it with your team.</p>
+        <a class="go" href="skills/safe-ai-adoption-checklist/">Read the SOP →</a>
+      </div>
+      <div class="card">
+        <span class="tag soon">Coming next</span>
+        <h3>Cyber basics for SMEs</h3>
+        <p>Accounts, MFA, backups, phishing and device hygiene, with a plain-language checklist and a monthly routine.</p>
+      </div>
+      <div class="card">
+        <span class="tag soon">Coming next</span>
+        <h3>AI vendor review</h3>
+        <p>Questions to ask before signing an AI tool: training on your data, retention, sub-processors, breach notice and exit terms.</p>
+      </div>
+      <div class="card">
+        <span class="tag soon">Coming next</span>
+        <h3>AI incident response</h3>
+        <p>What to do when an AI tool leaks data, gives a harmful answer or is misused: contain, assess, notify, learn.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="start" class="soft">
+  <div class="wrap">
+    <h2>Start here</h2>
+    <p class="lead">A simple way to get started in one working session.</p>
+    <ol class="steps">
+      <li><div><strong>Pick one low-risk use case.</strong> Something that happens weekly and costs nothing if the AI gets it wrong.</div></li>
+      <li><div><strong>Run the checklist.</strong> Open the interactive checklist, tick what is in place and note the evidence beside each item.</div></li>
+      <li><div><strong>Fix the red flags first.</strong> Anything unresolved on data, money or people blocks go-live.</div></li>
+      <li><div><strong>Sign off and set a date.</strong> Record the owner and the 90-day review date. Repeat for each new use case.</div></li>
+    </ol>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Who is this for?</h2>
+    <p class="lead">Owners and managers of small and medium businesses who want to use AI without taking on avoidable risk. You do not need a security or legal background. Where a legal question comes up, the tools tell you to confirm it with a professional.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    Prepared by <strong>SafeAlign AI</strong> · <a href="mailto:info@safealignai.io">info@safealignai.io</a><br>
+    Practical guidance, not legal advice. PIPEDA, Ontario human-rights, AODA and contract obligations should be confirmed with a qualified professional.
+  </div>
+</footer>
+</body>
+</html>

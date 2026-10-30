@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Safe AI Adoption Checklist · SME AI Safety Toolkit</title>
+<meta name="description" content="Interactive 26-item Safe AI Adoption checklist for small and medium businesses. Prepared by SafeAlign AI.">
+<style>
+:root{--ink:#1F2937;--muted:#5B6472;--line:#E5E7EB;--bg:#FFFFFF;--soft:#F5F7F8;--green:#16A34A;--green-d:#0F7A36;--dark:#111827;--red:#B91C1C;--amber:#B45309}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--ink:#E5E7EB;--muted:#9CA3AF;--line:#2B3340;--bg:#0E1116;--soft:#161B22;--green:#34D399;--green-d:#6EE7B7;--dark:#000;--red:#FCA5A5;--amber:#FCD34D}}
+:root[data-theme="dark"]{--ink:#E5E7EB;--muted:#9CA3AF;--line:#2B3340;--bg:#0E1116;--soft:#161B22;--green:#34D399;--green-d:#6EE7B7;--dark:#000;--red:#FCA5A5;--amber:#FCD34D}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+a{color:var(--green-d)}
+header{background:var(--dark);color:#fff}
+.wrap{max-width:860px;margin:0 auto;padding:0 16px}
+.top{display:flex;align-items:center;gap:12px;padding:14px 0;font-size:14px}
+.top a{color:#D1D5DB;text-decoration:none}
+.top img{height:36px;width:36px;border-radius:50%;background:#fff}
+.top .sp{flex:1}
+.hd{padding:28px 0 20px}
+.hd h1{margin:0 0 8px;font-size:clamp(24px,4vw,34px);letter-spacing:-.4px}
+.hd p{margin:0;color:#D1D5DB;max-width:680px}
+.bar{position:sticky;top:0;background:var(--bg);border-bottom:1px solid var(--line);z-index:5}
+.bar .wrap{padding-top:12px;padding-bottom:12px;display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+.meter{flex:1;min-width:180px;height:10px;background:var(--soft);border-radius:99px;overflow:hidden;border:1px solid var(--line)}
+.meter i{display:block;height:100%;width:0;background:var(--green);transition:width .25s}
+.count{font-weight:600;font-size:15px;white-space:nowrap}
+.ctl{display:flex;gap:8px;flex-wrap:wrap}
+button,.dl{font:inherit;font-size:14px;border:1px solid var(--line);background:var(--bg);color:var(--ink);padding:7px 12px;border-radius:8px;cursor:pointer;text-decoration:none}
+button:hover,.dl:hover{border-color:var(--green)}
+main{padding:20px 0 40px}
+.intake{border:1px solid var(--line);border-radius:12px;padding:18px;margin-bottom:24px;background:var(--soft)}
+.intake h2{font-size:17px;margin:0 0 10px}
+.intake label{display:block;font-size:14px;color:var(--muted);margin-top:10px}
+.intake input,.intake select{width:100%;margin-top:4px;padding:9px 10px;font:inherit;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink)}
+.sec{margin-bottom:28px}
+.sec h2{font-size:18px;margin:0 0 2px;letter-spacing:.2px}
+.sec .sub{color:var(--muted);font-size:14px;margin:0 0 10px}
+.item{display:grid;grid-template-columns:auto 1fr;gap:12px;padding:12px 14px;border:1px solid var(--line);border-radius:10px;margin-bottom:10px;background:var(--bg)}
+.item.done{border-color:var(--green)}
+.item input[type=checkbox]{width:20px;height:20px;margin-top:3px;accent-color:var(--green);cursor:pointer}
+.item .t{font-weight:600}
+.item .d{color:var(--muted);font-size:15px;margin-top:2px}
+.item textarea{width:100%;margin-top:8px;font:inherit;font-size:14px;padding:8px 10px;border:1px dashed var(--line);border-radius:8px;background:transparent;color:var(--ink);min-height:38px;resize:vertical}
+.item textarea::placeholder{color:var(--muted)}
+.out{border-top:2px solid var(--line);margin-top:24px;padding-top:18px}
+.out h2{font-size:18px;margin:0 0 8px}
+.flag{color:var(--red);font-weight:600}
+.warn{color:var(--amber)}
+ul.todo{padding-left:20px;margin:8px 0}
+.note{font-size:13px;color:var(--muted);margin-top:24px}
+.toast{position:fixed;bottom:16px;left:50%;transform:translateX(-50%);background:var(--dark);color:#fff;padding:8px 14px;border-radius:8px;font-size:14px;opacity:0;transition:opacity .2s;pointer-events:none}
+.toast.on{opacity:1}
+@media print{header,.bar,.intake .hint,.ctl,.toast{display:none!important}.item{break-inside:avoid;border-color:#999}body{color:#000;background:#fff}.item textarea{border:none;min-height:24px}}
+footer{border-top:1px solid var(--line);padding:20px 0;color:var(--muted);font-size:14px}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="top">
+      <img src="../assets/safealign-logo.png" alt="SafeAlign AI logo">
+      <a href="../">← SME AI Safety Toolkit</a>
+      <span class="sp"></span>
+      <a href="mailto:info@safealignai.io">info@safealignai.io</a>
+    </div>
+    <div class="hd">
+      <h1>Safe AI Adoption Checklist</h1>
+      <p>26 items for one AI use case. Tick what is in place, note the evidence, and generate your sign-off record. Your answers stay in this browser only.</p>
+    </div>
+  </div>
+</header>
+
+<div class="bar">
+  <div class="wrap">
+    <div class="meter" aria-hidden="true"><i id="fill"></i></div>
+    <div class="count" id="count">0 of 26 done</div>
+    <div class="ctl">
+      <button id="reset" type="button">Clear all</button>
+      <button id="print" type="button">Print / save as PDF</button>
+      <a class="dl" href="../skills/safe-ai-adoption-checklist/Safe_AI_Adoption_Checklist_Editable.docx">Editable Word version</a>
+    </div>
+  </div>
+</div>
+
+<main>
+  <div class="wrap">
+    <div class="intake">
+      <h2>Use case</h2>
+      <span class="hint" style="font-size:14px;color:var(--muted)">Fill these in once. They appear on your sign-off record.</span>
+      <label>What will the AI do, and for whom?<input id="uc" placeholder="e.g. Draft customer follow-up emails for our sales team"></label>
+      <label>Tool and plan<input id="tool" placeholder="e.g. Claude Team, ChatGPT Business, Gemini for Workspace"></label>
+      <label>Data it will touch
+        <select id="data">
+          <option value="">Choose…</option>
+          <option>Public information only</option>
+          <option>Internal business information</option>
+          <option>Customer personal information</option>
+          <option>Staff or payroll information</option>
+          <option>Client files</option>
+          <option>Health or financial information (high risk)</option>
+        </select>
+      </label>
+      <label>Owner day to day<input id="owner" placeholder="Name"></label>
+    </div>
+
+    <div id="sections"></div>
+
+    <div class="out">
+      <h2>Sign-off record</h2>
+      <div id="status"></div>
+      <h3 style="font-size:15px;margin:14px 0 4px">Red flags</h3>
+      <div id="flags"></div>
+      <h3 style="font-size:15px;margin:14px 0 4px">To-do list</h3>
+      <ul class="todo" id="todo"></ul>
+      <p><strong>Reviewed by:</strong> ______________________ &nbsp; <strong>Date:</strong> ____________ &nbsp; <strong>Next review due:</strong> ____________</p>
+      <p class="note">This checklist is practical guidance, not legal advice. Confirm PIPEDA, Ontario human-rights, AODA and contract obligations with a qualified professional. The owner approves the use case; this record documents readiness only.</p>
+    </div>
+  </div>
+</main>
+
+<div class="toast" id="toast">Saved in this browser</div>
+
+<footer>
+  <div class="wrap">Prepared by <strong>SafeAlign AI</strong> · <a href="mailto:info@safealignai.io">info@safealignai.io</a> · questions and suggestions welcome</div>
+</footer>
+
+<script>
+const SECTIONS = [
+ {id:"0", title:"Before you start", sub:"Pick one thing, and know what better looks like", items:[
+  ["Pick one low-risk, high-frequency task","Something that happens weekly and costs nothing if AI gets it wrong. Not payroll, not legal.", "flag"],
+  ["Write the “done” number","Hours saved, response time or error rate. Decide now how you will tell in 60 days whether it worked."]]},
+ {id:"1", title:"Data and privacy", sub:"What goes in, and where it lives", items:[
+  ["Decide what data can go in","Public info is fine from day one. Customer, staff and payroll data wait for an approved tool.","flag"],
+  ["Set up a proper business account","A paid plan with no training on your data, stored where you approve, and yours to take if you leave.","flag"],
+  ["Know your personal-information obligations","PIPEDA applies to small shops too. Consent given for one purpose does not automatically cover AI use.","flag"],
+  ["Separate your data from your prompts","Strip names, emails and account numbers before pasting. Use placeholders like [CLIENT]."],
+  ["Set a retention rule","How long the tool keeps chat history and uploads, and who is responsible for deleting them."]]},
+ {id:"2", title:"Security and controls", sub:"Who can act, and how you stay in charge", items:[
+  ["One use case, one owner","Name what AI will do first and who is in charge.","flag"],
+  ["One login each, nothing shared","Own login, two-step sign-in, and the tool sees only what it needs.","flag"],
+  ["A person approves the big stuff","Money, signatures and anything customers or job applicants see get a human okay first.","flag"],
+  ["You can switch it off today","One named person can pause the tool at any time, and a one-page plan covers a bad day.","flag"],
+  ["Treat AI like a new hire with no judgment","It can be tricked by what it reads: emails, web pages, documents. Nothing it reads counts as an instruction."],
+  ["Check it monthly, not just at setup","Spot-check ten outputs. Log the misses and who fixed them."],
+  ["Know your vendor’s incident contact","Who you call, and what they promise in writing, if your data leaks."]]},
+ {id:"3", title:"Ownership and IP", sub:"What your business keeps", items:[
+  ["Your work stays yours","Before anyone clicks agree, the terms must say your data and results belong to you.","flag"],
+  ["Keep a record of the human touch","Note who guided and edited the AI’s work, and set ownership in your contracts."],
+  ["Don’t put in what you don’t own","Client files, licensed images and competitor material can create liability on the way out, not just the way in."],
+  ["Check outputs for other people’s work","AI can reproduce copyrighted or trademarked content. Review anything customer-facing before it ships."]]},
+ {id:"4", title:"People and training", sub:"What your team knows, and can say", items:[
+  ["Tell staff what’s allowed, in one page","Approved tools, banned data, and who to ask when unsure."],
+  ["Train before you deploy","Thirty minutes on prompting and on spotting confident wrong answers."],
+  ["Make it safe to report a mistake","No blame for flagging an AI error. Blame for hiding one."]]},
+ {id:"5", title:"Customers and transparency", sub:"What people outside the business can expect", items:[
+  ["Tell customers when AI is talking to them","Chatbots, drafted emails, generated images. A short notice is enough."],
+  ["Keep a human path","A visible way to reach a person, especially for complaints, refunds and anything legal.","flag"],
+  ["Watch for bias in decisions about people","Hiring, pricing, credit, tenant screening. Human-rights and accessibility rules apply whoever made the call.","flag"]]},
+ {id:"6", title:"Review and exit", sub:"How it stays safe, and how you leave", items:[
+  ["Date the next review","Ninety days, then quarterly. Re-run this checklist when the tool, the terms or the use case changes."],
+  ["Have an exit plan","Export format, how long it takes, and what you would lose if you stopped tomorrow."]]}
+];
+
+const ITEMS = SECTIONS.flatMap(s => s.items.map((it, i) => ({key: s.id + "." + (i+1), sec: s, title: it[0], desc: it[1], flag: it[2] === "flag"})));
+const KEY = "sme-safe-ai-checklist-v1";
+let state = {};
+try { state = JSON.parse(localStorage.getItem(KEY) || "{}"); } catch (e) { state = {}; }
+function save(){ try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) {} }
+function flash(){ const t=document.getElementById("toast"); t.classList.add("on"); clearTimeout(flash.h); flash.h=setTimeout(()=>t.classList.remove("on"),1100); }
+
+const root = document.getElementById("sections");
+SECTIONS.forEach(s => {
+  const wrap = document.createElement("div"); wrap.className = "sec";
+  wrap.innerHTML = `<h2>${s.id}. ${s.title}</h2><p class="sub">${s.sub}</p>`;
+  s.items.forEach((it, i) => {
+    const key = s.id + "." + (i+1);
+    const st = state[key] || {};
+    const box = document.createElement("div"); box.className = "item" + (st.done ? " done" : ""); box.id = "item-"+key;
+    box.innerHTML = `<input type="checkbox" id="c-${key}" ${st.done ? "checked" : ""} aria-label="${it[0]}">
+      <div><div class="t">${key} ${it[0]}</div><div class="d">${it[1]}</div>
+      <textarea id="n-${key}" placeholder="Evidence or notes, e.g. 'Terms page, section 4, confirms no training on our data'">${st.note ? st.note.replace(/</g,"&lt;") : ""}</textarea></div>`;
+    wrap.appendChild(box);
+  });
+  root.appendChild(wrap);
+});
+
+ITEMS.forEach(it => {
+  const c = document.getElementById("c-"+it.key), n = document.getElementById("n-"+it.key);
+  c.addEventListener("change", () => { state[it.key] = {...(state[it.key]||{}), done: c.checked}; document.getElementById("item-"+it.key).classList.toggle("done", c.checked); save(); render(); flash(); });
+  n.addEventListener("input", () => { state[it.key] = {...(state[it.key]||{}), note: n.value}; save(); });
+});
+
+["uc","tool","data","owner"].forEach(id => {
+  const el = document.getElementById(id);
+  try { el.value = localStorage.getItem("sme-uc-"+id) || ""; } catch(e){}
+  el.addEventListener("input", () => { try { localStorage.setItem("sme-uc-"+id, el.value); } catch(e){} render(); });
+  el.addEventListener("change", () => { try { localStorage.setItem("sme-uc-"+id, el.value); } catch(e){} render(); });
+});
+
+function esc(s){ return String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c])); }
+
+function render(){
+  const done = ITEMS.filter(it => state[it.key] && state[it.key].done).length;
+  document.getElementById("fill").style.width = (done/ITEMS.length*100) + "%";
+  document.getElementById("count").textContent = `${done} of ${ITEMS.length} done`;
+  const open = ITEMS.filter(it => !(state[it.key] && state[it.key].done));
+  const redOpen = open.filter(it => it.flag && ["1","2","5"].includes(it.sec.id));
+  const status = done === ITEMS.length ? "All 26 items in place." : `${done} in place, ${open.length} open (${redOpen.length} of them red flags that block go-live).`;
+  const uc = ["uc","tool","data","owner"].map(id => document.getElementById(id).value).filter(Boolean);
+  document.getElementById("status").innerHTML = (uc.length ? `<p><strong>Use case:</strong> ${esc(document.getElementById("uc").value||"—")}<br><strong>Tool:</strong> ${esc(document.getElementById("tool").value||"—")}<br><strong>Data:</strong> ${esc(document.getElementById("data").value||"—")}<br><strong>Owner:</strong> ${esc(document.getElementById("owner").value||"—")}</p>` : "") + `<p>${status}</p>`;
+  const flags = redOpen;
+  document.getElementById("flags").innerHTML = flags.length
+    ? `<ul class="todo">${flags.map(it => `<li class="flag">${it.key} ${esc(it.title)}</li>`).join("")}</ul><p class="note">These block go-live until resolved.</p>`
+    : `<p>${done ? "No open red flags." : "None yet. Items are still being checked."}</p>`;
+  document.getElementById("todo").innerHTML = open.length
+    ? open.map(it => `<li><span class="${it.flag?'warn':''}">${it.key} ${esc(it.title)}</span>${state[it.key]&&state[it.key].note ? ` <em>(${esc(state[it.key].note.slice(0,80))})</em>` : ""}</li>`).join("")
+    : "<li>Nothing open. Set the 90-day review date.</li>";
+}
+
+document.getElementById("reset").addEventListener("click", () => {
+  if (!confirm("Clear all ticks and notes in this browser?")) return;
+  state = {}; save(); ITEMS.forEach(it => { document.getElementById("c-"+it.key).checked = false; document.getElementById("n-"+it.key).value = ""; document.getElementById("item-"+it.key).classList.remove("done"); }); render();
+});
+document.getElementById("print").addEventListener("click", () => window.print());
+render();
+</script>
+</body>
+</html>
